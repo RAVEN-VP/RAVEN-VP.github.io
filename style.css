@@ -120,7 +120,7 @@ a {
 .hero-logo {
   display: block;
   margin: 0 auto;
-  height: clamp(120px, 20vw, 220px);
+  height: clamp(140px, 24vw, 260px);
   width: auto;
 }
 
