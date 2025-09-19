@@ -78,6 +78,14 @@ a {
   color: #fff;
 }
 
+.footer-title {
+  text-align: center;
+  margin: 0 0 12px;   /* space above logos */
+  font-size: 1.25rem;
+  color: #fff;        /* matches dark footer */
+  letter-spacing: .3px;
+}
+
 /* --- Footer logos: side-by-side, no bullets --- */
 .logo-grid {
   display: flex;               /* put items in a row */
