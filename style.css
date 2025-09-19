@@ -78,15 +78,14 @@ a {
   color: #fff;
 }
 
-.footer-title {
+.site-footer h2.footer-title {
   text-align: center;
-  margin: 0 0 12px;   /* space above logos */
+  margin: 0 0 12px;
   font-size: 1.25rem;
-  color: #fff;        /* matches dark footer */
   letter-spacing: .3px;
+  color: #fff !important;  /* ensures white in the dark footer */
 }
 
-/* --- Footer logos: side-by-side, no bullets --- */
 .logo-grid {
   display: flex;               /* put items in a row */
   justify-content: center;     /* center the pair */
@@ -105,7 +104,7 @@ a {
   content: "";
 }
 
-/* Keep correct aspect ratio and smaller than original */
+/* Keeps correct aspect ratio and smaller than original */
 .partner-logo {
   height: 64px;                /* common visual height */
   width: auto;                 /* preserve aspect ratio */
