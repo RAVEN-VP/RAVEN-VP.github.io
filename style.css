@@ -38,13 +38,14 @@ body {
   color: transparent;
 }
 
-.site-header .brand-tagline {
-  margin: 0;
-  color: #e6e6e6;
+.site-header .brand-tagline{
   font-family: "Oxanium", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-weight: 600;
-  letter-spacing: .2px;
-  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  font-weight: 700;                     /* bold */
+  font-size: clamp(1.1rem, 2.6vw, 1.6rem);
+  letter-spacing: .25px;
+  color: #e6e6e6;
+  margin: 0;
+  line-height: 1.25;
 }
 
 .main-content {
@@ -140,12 +141,15 @@ a {
   width: auto;
 }
 
-/* Hero subtitle — single, final rule */
+/* Hero subtitle — final */
 .hero-subtitle {
-  margin-top: 12px;                          /* space below logo */
-  max-width: 46rem;                          /* keep line length nice */
+  margin-top: 12px;                    /* space below logo */
+  max-width: 46rem;                    /* keep line length nice */
+  font-family: "Oxanium", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;                    /* medium-bold for readability */
   color: #555;
-  font-size: clamp(.95rem, 1.2vw + .6rem, 1.15rem);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.5;
 }
+
 
