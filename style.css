@@ -114,10 +114,29 @@ a {
   display: block;
 }
 
-.hero-subtitle {
-  margin: 12px 0 0;                    /* space below the logo */
+/* Hero layout */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center horizontally */
+  justify-content: center;
   text-align: center;
-  color: #555;                         /* readable on light hero bg */
+  padding: 1.5rem 0;
+}
+
+.hero-logo {
+  display: block;
+  margin: 0 auto;
+  height: clamp(120px, 20vw, 220px);
+  width: auto;
+}
+
+/* Hero subtitle — single, final rule */
+.hero-subtitle {
+  margin-top: 12px;                          /* space below logo */
+  max-width: 46rem;                          /* keep line length nice */
+  color: #555;
   font-size: clamp(.95rem, 1.2vw + .6rem, 1.15rem);
   line-height: 1.5;
 }
+
