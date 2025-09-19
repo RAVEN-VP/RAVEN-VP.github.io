@@ -73,6 +73,11 @@ a {
   background: #fafafa;
 }
 
+.site-footer {
+  background: #333;
+  color: #fff;
+}
+
 /* --- Footer logos: side-by-side, no bullets --- */
 .logo-grid {
   display: flex;               /* put items in a row */
