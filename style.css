@@ -64,3 +64,41 @@ a {
     padding: 1rem;
     border-radius: 5px;
 }
+
+/* Footer */
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid #e5e7eb;
+  background: #fafafa;
+}
+
+/* Logo strip */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.logo-grid li {
+  list-style: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* keep aspect ratio, no squish */
+.logo-grid img,
+.logo-grid svg {
+  max-height: 64px;         /* adjust to taste */
+  max-width: 220px;
+  width: auto;              /* prevent stretch */
+  height: auto;             /* prevent stretch */
+  object-fit: contain;
+  display: inline-block;
+}
