@@ -68,9 +68,10 @@ a {
 /* Footer */
 .site-footer {
   margin-top: 2rem;
-  padding: 2rem 0 3rem;
-  border-top: 1px solid #e5e7eb;
-  background: #fafafa;
+  background: #333;
+  color: #fff;
+  padding: 24px 0;            /* equal top & bottom */
+  border-top: 1px solid #444;
 }
 
 .site-footer {
@@ -80,8 +81,8 @@ a {
 
 .site-footer h2.footer-title {
   text-align: center;
-  margin: 0 0 12px;
-  font-size: 1.25rem;
+  margin: 0 0 24px;
+  font-size: 1.75rem;
   letter-spacing: .3px;
   color: #fff !important;  /* ensures white in the dark footer */
 }
