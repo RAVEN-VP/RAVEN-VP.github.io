@@ -113,3 +113,11 @@ a {
   max-width: 100%;
   display: block;
 }
+
+.hero-subtitle {
+  margin: 12px 0 0;                    /* space below the logo */
+  text-align: center;
+  color: #555;                         /* readable on light hero bg */
+  font-size: clamp(.95rem, 1.2vw + .6rem, 1.15rem);
+  line-height: 1.5;
+}
