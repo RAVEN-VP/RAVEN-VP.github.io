@@ -94,7 +94,8 @@ a {
   gap: 32px;
   margin: 0;                   /* remove default UL margin */
   padding: 0;                  /* remove default UL padding */
-  list-style: none;            /* remove bullets (Safari/Firefox) */
+  list-style: none;
+  margin-bottom: 24px;
 }
 
 .logo-grid li {
