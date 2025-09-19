@@ -73,21 +73,29 @@ a {
   background: #fafafa;
 }
 
-.logo-row {
-  display: flex;
-  justify-content: center;      /* keeps the *pair* centered */
+/* --- Footer logos: side-by-side, no bullets --- */
+.logo-grid {
+  display: flex;               /* put items in a row */
+  justify-content: center;     /* center the pair */
   align-items: center;
-  gap: 32px;                    /* space between logos */
-  flex-wrap: wrap;              /* wrap on small screens */
-  margin-top: .5rem;
+  gap: 32px;
+  margin: 0;                   /* remove default UL margin */
+  padding: 0;                  /* remove default UL padding */
+  list-style: none;            /* remove bullets (Safari/Firefox) */
 }
 
+.logo-grid li {
+  list-style: none;            /* belt & braces */
+}
+
+.logo-grid li::marker {        /* remove marker glyph if any user agent insists */
+  content: "";
+}
+
+/* Keep correct aspect ratio and smaller than original */
 .partner-logo {
-  height: 64px;                 /* consistent visual size */
-  width: auto;                  /* keep aspect ratio */
+  height: 64px;                /* common visual height */
+  width: auto;                 /* preserve aspect ratio */
+  max-width: 100%;
   display: block;
-}
-
-@media (max-width: 700px) {
-  .partner-logo { height: 48px; }
 }
