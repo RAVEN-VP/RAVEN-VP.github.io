@@ -26,13 +26,6 @@ header .container {
     align-items: center;
 }
 
-#logo {
-    height: 400px;
-    width: 400px;
-    display: block;
-    margin: 0 auto 1rem auto;
-}
-
 header h1 {
     margin: 0;
     font-size: 2.5rem;
