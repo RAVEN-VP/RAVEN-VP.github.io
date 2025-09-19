@@ -46,6 +46,7 @@ body {
   color: #e6e6e6;
   margin: 0;
   line-height: 1.25;
+  text-transform: uppercase;
 }
 
 .main-content {
@@ -150,6 +151,7 @@ a {
   color: #555;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 
