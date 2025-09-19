@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Modie Al-Shakarchi",
+        "role": "Principal Investigator",
+        "bio": "Modie Al-Shakarchi is the lead researcher on the RAVEN project, focusing on the integration of robotics and virtual production. His work is centered on creating a seamless workflow between Unreal Engine 5 and ROS 2 to enable real-time, on-set robotic cinematography."
+    },
+    {
+        "name": "Someone else",
+        "role": "Another Role",
+        "bio": "Bio of someone else."
+    }
+]

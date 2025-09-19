@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAVEN Research Project</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>RAVEN: Real-time Adaptive Virtual-twin Environment for Next-generation robotic virtual production</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <img src="RAVEN-logo.png" alt="RAVEN Project Logo" id="logo">
+            <h2>About The Project</h2>
+            <p>
+                RAVEN (Real-time Adaptive Virtual-twin Environment for Next-generation robotic virtual production) makes Unreal Engine 5 (UE5) the place where robotic crew are trained, validated, and deployed. The system embeds a live digital twin of the stage in UE5 and connects it to the Robot Operating System 2 (ROS 2), so a humanoid robot can perform camera operation (and later lighting/FX) with frame-accurate timing, low latency, and predictive safety.
+            </p>
+            <p>
+                <strong>Why now:</strong> LED/XR stages deliver real-time pixels, but the physical layer (camera placement, lighting pose, practical FX) still relies on manual rigging and rehearsals that slow iteration and add safety overhead. RAVEN closes this gap by giving UE5 direct influence over robot motion and stage devices, so directors/DPs can author, preview, and replay robotic camera moves entirely inside UE5, with visible safety zones and timing aligned to LED scanout and camera shutter (pose-at-display-time).
+            </p>
+            <h2>Key Features</h2>
+            <ul>
+                <li>An UE5 to ROS 2 bridge with QoS-tuned streams and PTP time-sync.</li>
+                <li>A cinematography-aware control stack (model predictive control + learned policies) that respects framing, horizon, and continuity.</li>
+                <li>Predictive Speed-and-Separation Monitoring (SSM) and keep-out volumes rendered in UE5 for human-robot safety.</li>
+                <li>XR authoring/oversight tools (e.g., Meta Quest) so creatives can set paths, scrub takes, and validate safety before execution.</li>
+                <li>Extensibility: a companion workstream, SCAR (Studio-Centric Autonomous Robot), coordinates ceiling-mounted lighting/FX on the same timeline and twin, enabling co-authored camera + lighting cues.</li>
+            </ul>
+            <h2>Outcomes</h2>
+            <ul>
+                <li><strong>Performance:</strong> Command-to-camera-pose latency of ≤120 ms (p95) and pose-to-render latency of ≤50 ms (p95).</li>
+                <li><strong>Safety:</strong> Safe-stop activation in ≤80 ms upon a Speed-and-Separation Monitoring (SSM) breach.</li>
+                <li><strong>Efficiency:</strong> A 30–50% reduction in setup and re-take time for complex motion shots.</li>
+                <li><strong>Reusability:</strong> The creation of reusable “shot profiles” for common cinematographic maneuvers.</li>
+                <li><strong>Deliverables:</strong> The project will deliver UE5/ROS 2 packages, a sample project, comprehensive documentation, and public benchmarks to validate the system's performance.</li>
+            </ul>
+            <h2>Our Team</h2>
+            <div id="team-members">
+                <!-- Team members will be listed here -->
+            </div>
+
+            <h2>Collaborators</h2>
+            <div id="collaborators">
+                <div class="collaborator">
+                    <p>University of York</p>
+                </div>
+                <div class="collaborator">
+                    <p>University of Cardiff</p>
+                </div>
+                <div class="collaborator">
+                    <p>Insitituion for Safe Autonomy</p>
+                </div>
+                <div class="collaborator">
+                    <p>XR Stories</p>
+                </div>
+                <div class="collaborator">
+                    <p>CoSTAR Live Lab</p>
+                </div>
+            </div>
+
+            <h2>Contact</h2>
+            <p>For any inquiries, please reach out to us at (<strong>Modie, you have to change this to your personal email address</strong>) <a href="mailto:mbas504@york.ac.uk">mbas504@york.ac.uk</a>.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
