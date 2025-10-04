@@ -1,7 +1,12 @@
 [
     {
         "name": "Modie Shakarchi",
-        "role": "Project Leader",
+        "role": "Project Lead",
         "bio": "Modie Shakarchi is the lead researcher on the RAVEN project, focusing on the integration of robotics and virtual production. His work is centred on creating a seamless workflow between Unreal Engine 5 and ROS 2 to enable real-time, on-set robotic cinematography."
+    },
+    {
+        "name": "Xiaotian Dai",
+        "role": "Chief Advisor",
+        "bio": "Dr. Xiaotian Dai is the advisor of the RAVEN project, where his interest is to implement a low-latency workflow for RAVEN. He is an expert in real-time systems and model-based system engineering (MBSE)."
     }
 ]
