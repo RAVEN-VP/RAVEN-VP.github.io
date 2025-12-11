@@ -1,12 +1,22 @@
 [
     {
+        "name": "Xiaotian Dai",
+        "role": "Principal Investigator",
+        "bio": "Dr. Xiaotian Dai is the advisor of the RAVEN project, where his interest is to implement a low-latency workflow for RAVEN. He is an expert in real-time systems and model-based system engineering (MBSE)."
+    },
+    {
+        "name": "Pengcheng Liu",
+        "role": "Co-Investigator",
+        "bio": "Dr. Pengcheng Liu has a research interest in robot motion planning and control. He is an expert in learning-based control and model-based control, and use of AI in robotics."
+    },
+    {
         "name": "Modie Shakarchi",
         "role": "Project Lead",
         "bio": "Modie Shakarchi is the lead researcher on the RAVEN project, focusing on the integration of robotics and virtual production. His work is centred on creating a seamless workflow between Unreal Engine 5 and ROS 2 to enable real-time, on-set robotic cinematography."
     },
     {
-        "name": "Xiaotian Dai",
+        "name": "John McDermid",
         "role": "Chief Advisor",
-        "bio": "Dr. Xiaotian Dai is the advisor of the RAVEN project, where his interest is to implement a low-latency workflow for RAVEN. He is an expert in real-time systems and model-based system engineering (MBSE)."
+        "bio": "Prof. John McDermid is a professor in safety critical systems with a focus on understanding and mitigating risks in safety-critical systems. He is the co-director of the Institute for Safe Autonomy (ISA), University of York."
     }
 ]

@@ -54,6 +54,8 @@ body {
     padding: 2rem;
     margin-top: 1rem;
     border-radius: 5px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -152,6 +154,38 @@ a {
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   line-height: 1.5;
   text-transform: uppercase;
+}
+
+/* Concept image styling */
+.concept-image {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.concept-img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.concept-caption {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  text-align: center;
 }
 
 
