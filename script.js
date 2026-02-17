@@ -104,6 +104,59 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(update);
     }
 
+    // --- Concept image scroll-driven scale reveal ---
+    const conceptSection = document.getElementById('concept');
+    const conceptImg = conceptSection ? conceptSection.querySelector('.concept-img') : null;
+    const conceptCaption = conceptSection ? conceptSection.querySelector('.concept-caption') : null;
+    const conceptDesc = conceptSection ? conceptSection.querySelector('.concept-description') : null;
+
+    if (conceptImg) {
+        // Detect mobile for reduced scale range
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const scaleStart = isMobile ? 0.92 : 0.85;
+        const scaleEnd = 1;
+        const opacityStart = 0.6;
+        const opacityEnd = 1;
+        let ticking = false;
+
+        function updateConceptScroll() {
+            const rect = conceptSection.getBoundingClientRect();
+            const windowH = window.innerHeight;
+
+            // Progress: 0 when section top enters viewport bottom, 1 when section top reaches viewport center
+            const start = windowH;
+            const end = windowH * 0.3;
+            const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
+
+            // Ease-out cubic for smoother feel
+            const eased = 1 - Math.pow(1 - progress, 3);
+
+            const scale = scaleStart + (scaleEnd - scaleStart) * eased;
+            const opacity = opacityStart + (opacityEnd - opacityStart) * eased;
+
+            conceptImg.style.transform = `scale(${scale})`;
+            conceptImg.style.opacity = opacity;
+
+            // Reveal caption and description at 80% progress
+            if (eased > 0.8) {
+                if (conceptCaption) conceptCaption.classList.add('visible');
+                if (conceptDesc) conceptDesc.classList.add('visible');
+            }
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateConceptScroll);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Run once on load in case section is already in view
+        updateConceptScroll();
+    }
+
     // --- Smooth scroll for nav links (fallback for browsers without CSS smooth scroll) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
