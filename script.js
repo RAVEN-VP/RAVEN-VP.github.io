@@ -104,6 +104,60 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(update);
     }
 
+    // --- Concept image scroll-driven zoom + fade ---
+    const conceptSection = document.getElementById('concept');
+    const conceptImg = conceptSection ? conceptSection.querySelector('.concept-img') : null;
+    const conceptContent = conceptSection ? conceptSection.querySelector('.concept-content') : null;
+
+    if (conceptImg) {
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        const scaleStart = isMobile ? 0.6 : 0.5;
+        const scaleEnd = 1;
+        const radiusStart = 24;
+        const radiusEnd = 0;
+        let ticking = false;
+
+        function updateConceptScroll() {
+            const rect = conceptSection.getBoundingClientRect();
+            const windowH = window.innerHeight;
+
+            // Phase 1: Zoom in — as section scrolls into view
+            // 0 when section top at viewport bottom, 1 when section top at viewport top
+            const zoomProgress = Math.min(Math.max((windowH - rect.top) / windowH, 0), 1);
+            const zoomEased = 1 - Math.pow(1 - zoomProgress, 3);
+
+            const scale = scaleStart + (scaleEnd - scaleStart) * zoomEased;
+            const radius = radiusStart + (radiusEnd - radiusStart) * zoomEased;
+            const zoomOpacity = Math.min(zoomEased * 1.5, 1);
+
+            // Phase 2: Fade out — as the content scrolls over the image
+            let fadeOpacity = 1;
+            if (conceptContent) {
+                const contentRect = conceptContent.getBoundingClientRect();
+                // Fade starts when content top reaches 80% of viewport, ends at 20%
+                const fadeProgress = Math.min(Math.max((windowH * 0.8 - contentRect.top) / (windowH * 0.6), 0), 1);
+                fadeOpacity = 1 - fadeProgress;
+            }
+
+            const finalOpacity = zoomOpacity * fadeOpacity;
+
+            conceptImg.style.transform = `scale(${scale})`;
+            conceptImg.style.opacity = finalOpacity;
+            conceptImg.style.borderRadius = `${radius}px`;
+
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateConceptScroll);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        updateConceptScroll();
+    }
+
     // --- Smooth scroll for nav links (fallback for browsers without CSS smooth scroll) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {
